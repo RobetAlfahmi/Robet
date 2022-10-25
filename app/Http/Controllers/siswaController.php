@@ -95,7 +95,7 @@ class siswaController extends Controller
         $siswa=Siswa::find($id);
         $kontaks = $siswa->kontak()->get();
         // return($kontak);
-        return view('Showsiswa', compact('siswa','kontaks'));
+        return view('showsiswa', compact('siswa','kontaks'));
     }
 
     /**
