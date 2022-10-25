@@ -34,7 +34,7 @@ class projectController extends Controller
      */
     public function create()
     {
-        return view('Tambahsiswa');
+        return view('tambahsiswa');
     }
     
     public function tambah($id)
@@ -84,7 +84,7 @@ class projectController extends Controller
     public function show($id)
     {
         $projects=Siswa::find($id)->projects()->get();
-        return view('Showproject', compact('projects'));
+        return view('showproject', compact('projects'));
     }
 
     /**
@@ -96,7 +96,7 @@ class projectController extends Controller
     public function edit($id)
     {
         $project=projects::find($id);
-        return view('Editproject', compact('project'));
+        return view('editproject', compact('project'));
     }
 
     /**
