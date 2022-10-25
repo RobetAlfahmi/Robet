@@ -33,7 +33,7 @@ class siswaController extends Controller
      */
     public function create()                              //KU YAKIN KAU BISA KUYAKIN KAU PASTI BISA\\
     {
-        return view('Tambahsiswa');
+        return view('tambahsiswa');
     }
 
     /**
