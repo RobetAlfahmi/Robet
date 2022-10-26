@@ -53,10 +53,11 @@ Route::middleware('auth')->group(function(){
     Route::resource('mastersiswa', siswaController::class);
     Route::resource('masterproject', projectController::class);
     Route::resource('masterkontak', kontakController::class);
+    Route::post('masterkontak/tambah',[kontakController::class, 'tambah']);
     Route::get('mastersiswa/{id_siswa}/hapus',[siswaController::class, 'hapus'])->name('mastersiswa.hapus');
     Route::get('masterproject/create/{id_siswa}', [projectController::class, 'tambah'])->name('masterproject.tambah');
     Route::get('masterproject/edit/{id_siswa}', [projectController::class, 'edit']);
-    Route::get('masterkontak/create/{id_siswa}', [kontakController::class, 'create'])->name('masterkontak.tambah');
+    Route::get('masterkontak/create/{id_siswa}', [kontakController::class, 'create']);
     Route::post('masterkontak/store/{id_siswa}', [kontakController::class, 'store']);
     Route::post('logout', [loginController::class, 'logout']);
 });

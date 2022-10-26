@@ -54,6 +54,43 @@
             <h6 class="text-center" >Tidak ada data yang dipilih</h6>
           </div>
       </div>
+      <div class="card shadow mb-4">
+        <div class="card-header py-3" style="background: pink;">
+        <h6 class="m-0 font-weight-bold text-dark"><b>Jenis Kontak</b></h6>
+        </div>
+        <div class="card-body">
+          
+          <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Tambah Jenis Kontak
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Jenis</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="{{ url('masterkontak/tambah') }}" method="post">
+              
+              @csrf
+            <div class="modal-body">
+              <span>Jenis Kontak</span>
+              <input type="text" class="form-control mt-1 py-3" name="jenis_kontak"
+               style="font-size13px;" require>
+            </div>
+            <div class="modal-footer py-2">
+              <button type="submit" class="btn btn-primary">Tambah</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+          
   </div>
 </div>
 
