@@ -15,7 +15,7 @@
             @csrf
         <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-eraser"></i></button>
         </form>
-            <a class="btn-btn" href="/masterkontak/{{ $item->id }}/edit" style="text-decoration: none;">
+            <a class="btn-btn" href="/masterkontak/{{ $item->pivot->id }}/edit" style="text-decoration: none;">
             <span class="btn btn-success btn-sm" style="border-radius: 3px;">
                     <i class="fas fa-edit"></i>
             </span>
